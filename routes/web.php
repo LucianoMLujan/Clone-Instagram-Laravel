@@ -11,6 +11,28 @@
 |
 */
 
+use App\Image;
+
 Route::get('/', function () {
+
+    $images = Image::all();
+    foreach($images as $image) {
+        echo $image->image_path."<br/>";
+        echo $image->description."<br/>";
+        echo $image->user->name." ".$image->user->surname."<br/>";
+
+        if(count($image->comments) > 0) {
+            echo "<h4>Comentarios</h4>";
+            foreach($image->comments as $comment) {
+                echo $comment->user->nick." | ".$comment->content.'<br/>';
+            }
+        }
+        
+        echo 'Likes: '. count($image->likes);
+
+        echo "<hr/>";
+    }
+
+    die();
     return view('welcome');
 });
