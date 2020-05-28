@@ -36,6 +36,12 @@
                     </div>
                 </div>
             @endforeach
+
+            <!-- PAGINATION -->
+            <div class="clear-fix">
+                {{$images->links()}}
+            </div>
+
         </div>
     </div>
 </div>
