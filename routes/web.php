@@ -45,3 +45,5 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/configuracion', 'UserController@config')->name('config');
 Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.avatar');
 Route::post('/user/update', 'UserController@update')->name('user.update');
+Route::get('/upload-image', 'ImageController@create')->name('image.upload');
+Route::post('/image/save', 'ImageController@save')->name('image.save');
