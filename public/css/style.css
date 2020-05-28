@@ -49,9 +49,26 @@ form .avatar {
 
 .pub_image .description {
     padding: 20px;
+    padding-bottom: 0px;
 }
 
 .nickname {
     color: gray;
     font-weight: bold;
+}
+
+.pub_image .btn-comments {
+    margin: 20px;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.likes {
+    float: left;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.likes img {
+    width: 20px;
 }
