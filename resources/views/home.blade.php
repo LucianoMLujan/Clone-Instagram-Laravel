@@ -15,7 +15,9 @@
                             </div>
                         @endif
                         <div class="data-user">
-                            {{$image->user->nick}}
+                            <a href="{{ route('image.detail', ['id' => $image->id]) }}">
+                                {{$image->user->nick}}
+                            </a>
                         </div>
                     </div>
 
