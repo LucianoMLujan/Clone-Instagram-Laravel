@@ -42,15 +42,23 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+//USER ROUTES
 Route::get('/configuracion', 'UserController@config')->name('config');
 Route::get('/user/avatar/{filename}', 'UserController@getImage')->name('user.avatar');
 Route::post('/user/update', 'UserController@update')->name('user.update');
+Route::get('/profile/{id}', 'UserController@profile')->name('user.profile');
+
+//IMAGE ROUTES
 Route::get('/upload-image', 'ImageController@create')->name('image.upload');
 Route::post('/image/save', 'ImageController@save')->name('image.save');
 Route::get('/image/file/{filename}', 'ImageController@getImage')->name('image.file');
 Route::get('/image/{id}', 'ImageController@detail')->name('image.detail');
+
+//COMMENT ROUTES
 Route::post('/comment/save', 'CommentController@save')->name('comment.save');
 Route::get('/comment/delete/{id}', 'CommentController@delete')->name('comment.delete');
+
+//LIKE ROUTES
 Route::get('/like/{image_id}', 'LikeController@like')->name('like.save');
 Route::get('/dislike/{image_id}', 'LikeController@dislike')->name('like.delete');
 Route::get('/likes', 'LikeController@index')->name('likes.index');
