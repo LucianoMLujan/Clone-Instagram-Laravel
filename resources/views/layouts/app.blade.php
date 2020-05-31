@@ -7,10 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -54,6 +55,10 @@
                                 <a class="nav-link" href="{{ route('home') }}">Inicio</a>
                             </li>
                             
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('likes.index') }}">Favoritas</a>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('image.upload') }}">Subir Imagen</a>
                             </li>
