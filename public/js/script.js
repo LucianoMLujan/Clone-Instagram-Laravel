@@ -52,5 +52,10 @@ window.addEventListener("load", function() {
     dislike();
 
 
+    //SEARCH
+    $('#frmSearch').submit(function(){
+        $(this).attr('action', url+'/friends/'+$('#frmSearch #search').val());
+    });
+
 
 })
