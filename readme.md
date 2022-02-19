@@ -72,3 +72,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 -->
+
+<h1>Update to version 6 laravel</h1>
+<h4>Download project</h4>
+<h4>Run command composer update</h4>
+<h4>Run command php artisan key:generate</h4>
+<h4>Run database.sql file</h4>
